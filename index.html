@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ES-ES">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Ramón Trujillo Visuete">
+    <meta name="viewport"  content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <title>Recargas auxiliares</title>
+  </head>
+
+  <body>
+    <header>
+      <h2>Calculadora de recargas auxiliares</h2>
+    </header> 
+    <div class="wrapper">
+      <div id="maquinaA"><h4>Máquina A</h2>
+        <div class="izquierda" id="recaudacion1">Recaudación: </div>
+        <div class="derecha" id="valorRecaudacion1" contenteditable="true">0</div>
+        <div class="izquierda" id="cargas1">Cargas:</div>
+        <div class="derecha" id="valorCargas1" contenteditable="true">0</div>
+        <div class="izquierda" id="fectivo1">Efectivo: </div>
+        <div class="derecha" id="valorEfectivo1" contenteditable="true">0</div>
+        <div class="izquierda" id="averias1">P. Avería: </div>
+        <div class="derecha" id="valorAverias1" contenteditable="true">0</div>
+      </div>
+      <div id="maquinaB"><h4>Máquina B</h4>
+        <div class="izquierda" id="recaudacion2">Recaudación: </div>
+        <div class="derecha" id="valorRecaudacion2" contenteditable="true">0</div>
+        <div class="izquierda" id="cargas2">Cargas:</div>
+        <div class="derecha" id="valorCargas2" contenteditable="true">0</div>
+        <div class="izquierda" id="efectivo2">Efectivo: </div>
+        <div class="derecha" id="valorEfectivo2" contenteditable="true">0</div>
+        <div class="izquierda" id="averias2">P. Avería: </div>
+        <div class="derecha" id="valorAverias2" contenteditable="true">0</div>
+      </div>
+      <div id="maquinaC"><h4>Máquina C</h4>
+        <div class="izquierda" id="recaudacion3">Recaudación: </div>
+        <div class="derecha" id="valorRecaudacion3" contenteditable="true">0</div>
+        <div class="izquierda" id="cargas3">Cargas:</div>
+        <div class="derecha" id="valorCargas3" contenteditable="true">0</div>
+        <div class="izquierda" id="efectivo3">Efectivo: </div>
+        <div class="derecha" id="valorEfectivo3" contenteditable="true">0</div>
+        <div class="izquierda" id="averias3">P. Avería: </div>
+        <div class="derecha" id="valorAverias3" contenteditable="true">0</div>
+      </div>
+      
+      <div id="escribe">
+        Recarga auxiliar máquina A: <div id="resultado1"></div>
+        Recarga auxiliar máquina B: <div id="resultado2"></div>
+        Recarga auxiliar máquina C: <div id="resultado3"></div>
+        <div id="resGlobal"></div>
+      </div>
+    </div>
+    <div id="global">
+      <div class="izquierda" id="hopper">Hopper:</div>
+      <div class="derecha" id="valorHopper" contenteditable="true">0</div>
+      <div class="izquierda" id="recarga">R. Auxiliar:</div>
+      <div class="derecha" id="valorRecarga" contenteditable="true">0</div>
+      <input type="button" value="Calcular" onclick="auxiliar()">
+      <input type="button" value="Limpiar" onclick="limpiar()">
+    </div>
+    <script type="text/javascript" src="javascript.js"></script>
+    <footer>
+      <p>&copy 2024 Ramón Trujillo visuete</p>
+      <p>Versión 1.1</p>
+    </footer>
+  </body>
+</html>
