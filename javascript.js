@@ -24,36 +24,17 @@ let ave3 = document.querySelector("#valorAverias3");
 let hopper = document.querySelector("#valorHopper");
 let rec = document.querySelector("#valorRecarga");
 
-//Aquí se capturan los datos
-
-    //Máquina A
-reca1.addEventListener("keydown", function() {});
-cargas1.addEventListener("keydown", function() {});
-efec1.addEventListener("keydown", function() {});
-ave1.addEventListener("keydown", function() {});
-    //Máquina B
-reca2.addEventListener("keydown", function() {});
-cargas2.addEventListener("keydown", function() {});
-efec2.addEventListener("keydown", function() {});
-ave2.addEventListener("keydown", function() {});
-    //Máquina C
-reca3.addEventListener("keydown", function() {});
-cargas3.addEventListener("keydown", function() {});
-efec3.addEventListener("keydown", function() {});
-ave3.addEventListener("keydown", function() {});
-    //Datos comunes
-hopper.addEventListener("keydown", function() {});
-rec.addEventListener("keydown", function() {});
-    
 //Esta es la función que realiza los cálculos
+
+document.querySelector("#calcular").addEventListener("click", auxiliar);
 
 function auxiliar () {
 
-    let recAuxiliar1 = (parseFloat(reca1.textContent) + parseFloat(cargas1.textContent) + parseFloat(hopper.textContent) - parseFloat(efec1.textContent) - parseFloat(ave1.textContent)).toFixed(1);
+    let recAuxiliar1 = (parseFloat(reca1.textContent) + parseFloat(cargas1.textContent) + parseFloat(hopper.textContent) - parseFloat(efec1.textContent) - parseFloat(ave1.textContent)).toFixed(2);
     let res1 = document.querySelector("#resultado1");
-    let recAuxiliar2 = (parseFloat(reca2.textContent) + parseFloat(cargas2.textContent) + parseFloat(hopper.textContent) - parseFloat(efec2.textContent) - parseFloat(ave2.textContent)).toFixed(1);
+    let recAuxiliar2 = (parseFloat(reca2.textContent) + parseFloat(cargas2.textContent) + parseFloat(hopper.textContent) - parseFloat(efec2.textContent) - parseFloat(ave2.textContent)).toFixed(2);
     let res2 = document.querySelector("#resultado2");
-    let recAuxiliar3 = (parseFloat(reca3.textContent) + parseFloat(cargas3.textContent) + parseFloat(hopper.textContent) - parseFloat(efec3.textContent) - parseFloat(ave3.textContent)).toFixed(1);
+    let recAuxiliar3 = (parseFloat(reca3.textContent) + parseFloat(cargas3.textContent) + parseFloat(hopper.textContent) - parseFloat(efec3.textContent) - parseFloat(ave3.textContent)).toFixed(2);
     let res3 = document.querySelector("#resultado3"); 
     let resultado = parseFloat(valorRecarga.textContent - recAuxiliar1 - recAuxiliar2 - recAuxiliar3).toFixed(1);
     let resGlobal = document.querySelector("#resGlobal");
@@ -74,10 +55,15 @@ function auxiliar () {
         resGlobal.style.backgroundColor = "red";
         resGlobal.style.fontWeight = 800;
     }
+
 };
+
+//Esta es la función que limpia los datos
+
+document.querySelector("#limpiar").addEventListener("click", limpiar);
+
 function limpiar() {
-    //let total = document.querySelector("#escribe");
-    //total.textContent="v";
+    
     let entradas = document.querySelectorAll(".derecha");
     for (i = 0; i <= (entradas.length) - 1; i++) {
         entradas[i].textContent = 0;
